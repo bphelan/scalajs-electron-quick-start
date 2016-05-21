@@ -15,7 +15,7 @@ class App(dirName: String, require: js.Function1[String, js.Any]) extends Electr
   var mainWindow: Option[BrowserWindow] = None
   val console = global.console
 
-  val createWindow = () => {
+  def createWindow() = {
     // Create the browser window.
     mainWindow = Some(BrowserWindow(JsObject(width = 800, height = 600)))
     mainWindow foreach { window =>
@@ -37,7 +37,7 @@ class App(dirName: String, require: js.Function1[String, js.Any]) extends Electr
     console.log("Starting scalajs-electron-quick-start...");
 
     // This method will be called when Electron has finished initialization and is ready to create browser windows.
-    electronApp onceReady createWindow
+    electronApp onceReady createWindow _
 
     process.platform.asInstanceOf[String] match {
       case "darwin" =>
