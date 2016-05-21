@@ -22,6 +22,7 @@ lazy val ElectronQuickStart = (project in file(".")).
         val log = streams.value.log
         val file: sbt.File = (artifactPath in (Compile, packageScalaJSLauncher)).value
         val code = s"""'use strict';
+require("source-map-support").install();
 require('./${name.value}-jsdeps');
 require('./${name.value}');
 ${mainCl}(__dirname, require).main();

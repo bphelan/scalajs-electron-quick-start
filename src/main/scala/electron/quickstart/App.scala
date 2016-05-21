@@ -8,8 +8,6 @@ import scala.scalajs.js.annotation.JSExport
 
 @JSExport("ElectronQuickStart.App")
 class App(dirName: String, require: js.Function1[String, js.Any]) extends ElectronApp(require) with js.JSApp {
-  require("source-map-support").asInstanceOf[js.Dynamic].install();
-
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
   var mainWindow: Option[BrowserWindow] = None
