@@ -32,5 +32,9 @@ Learn more about Electron and its API in the [documentation](http://electron.ato
 ## Scala.js notes
 
 The `main.js` in the documentation mostly translates to `App.scala` in this repository.
+For a more in-depth review of some of the features that Scala.js can bring to
+Electron then please [have a look at the Scala.js demo app][demo-app].
 
 #### License [MIT](LICENSE.md)
+
+  [demo-app]: https://github.com/mscharley/scalajs-electron-demo
