@@ -4,9 +4,9 @@ import electron._
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{global, literal => JsObject}
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.JSExportTopLevel
 
-@JSExport("ElectronQuickStart.App")
+@JSExportTopLevel("ElectronQuickStart.App")
 class App(dirName: String, require: js.Function1[String, js.Any]) extends ElectronApp(require) with js.JSApp {
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
